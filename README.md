@@ -29,7 +29,8 @@ The plugin can be configured in the [**semantic-release** configuration file
 {
   "plugins": [
     ["@edgefarm/semantic-release-helm-oci", {
-      "registry": "oci://ghcr.io/edgefarm/abc"
+      "registry": "oci://ghcr.io/edgefarm/abc",
+      "chartPath" "charts/abc"
     }]
   ]
 }
@@ -41,6 +42,7 @@ plugins:
   -
     - '@edgefarm/semantic-release-helm-oci'
     - registry: oci://ghcr.io/edgefarm/abc
+      chartPath: "charts/abc"
 ```
 
 With this example, for each release, a Helm chart will be published to
